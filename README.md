@@ -100,7 +100,10 @@ WS : [ \t\n\r]+ -> skip ;
 ### Criando um codespace
 
 Para criar um codespace para o projeto, basta clicar nos botões, correspondentes no menu do repositório do GitHub, identificados em verde abaixo:
+
+
 ![enter image description here](https://github.com/dsr-pe/projeto-compiladores-antlr/blob/main/imagens/codespace-criacao.png?raw=true)
+
 
 Quando o Codespace for criado com sucesso, você irá visualizar as informações do projeto, conforme imagem:
 
