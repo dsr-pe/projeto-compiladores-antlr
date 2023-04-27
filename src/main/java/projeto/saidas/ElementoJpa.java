@@ -1,3 +1,10 @@
+/***
+ * Classe responsável por gerar os arquivos JPA
+ * 
+ * @author Danilo Rocha
+ * @author Heitor Lima
+ * @author Jônatas Henrique
+ */
 package projeto.saidas;
 
 import java.util.List;
@@ -11,8 +18,8 @@ public class ElementoJpa extends ElementoSaida{
 	private DadosTabela dadosTabela;
 	
 	public ElementoJpa(DadosTabela dTabela) {
+		super("model", dTabela.getNomeClasse());
 		this.dadosTabela = dTabela;
-		this.pacote = "model";
 		this.imports.add("import javax.persistence.Entity;\n");
 		this.imports.add( "import javax.persistence.Column;\n");
 		this.imports.add( "import javax.persistence.Table;\n");
@@ -30,7 +37,7 @@ public class ElementoJpa extends ElementoSaida{
 
 
 	private void gerarAbaerturaTabela() {
-		linhas.add(String.format("@Entity\n@Table(name = \"%s\" )\npublic class %s {\n\n", this.dadosTabela.getNomeTabela(),this.dadosTabela.getNomeClasse()));
+		linhas.add(String.format("@Entity\n@Table(name = \"%s\" )\npublic class %s {\n\n", this.dadosTabela.getNomeTabela(),this.nomeArquivo));
 	}
 	
 	private void gerarInfoColunas() {
@@ -76,6 +83,7 @@ public class ElementoJpa extends ElementoSaida{
 			linhas.add("\t}\n\n");		
 		}
 	}
+	
 	private void gerarFechamentoTabela() {
 		linhas.add("\n}");
 	}

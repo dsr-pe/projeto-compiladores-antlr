@@ -1,3 +1,10 @@
+/***
+ * Classe responsável por gerar os arquivos controladores de requisições
+ * 
+ * @author Danilo Rocha
+ * @author Heitor Lima
+ * @author Jônatas Henrique
+ */
 package projeto.saidas;
 
 import projeto.DadosTabela;
@@ -8,8 +15,8 @@ public class ElementoController extends ElementoSaida{
 	private DadosTabela dadosTabela;
 	
 	public ElementoController(DadosTabela dTabela) {
+		super("controller", dTabela.getNomeClasse() + "Controller");
 		this.dadosTabela = dTabela;
-		this.pacote = "controller";
 		this.imports.add("import java.util.List;\n");
 		this.imports.add("import org.springframework.beans.factory.annotation.Autowired;\n");
 		this.imports.add("import org.springframework.web.bind.annotation.ModelAttribute;\n");
@@ -69,7 +76,7 @@ public class ElementoController extends ElementoSaida{
 	}
 
 	private void gerarAbaertura() {
-		linhas.add(String.format("@Controller\n@RequestMapping(\"/%s\")\npublic class %sController{\n\n", Util.nome(this.dadosTabela.getNomeClasse(), false),this.dadosTabela.getNomeClasse(),this.dadosTabela.getNomeClasse()));
+		linhas.add(String.format("@Controller\n@RequestMapping(\"/%s\")\npublic class %s {\n\n", Util.nome(this.dadosTabela.getNomeClasse(), false),this.nomeArquivo));
 	}
 	
 	private void gerarFechamento() {

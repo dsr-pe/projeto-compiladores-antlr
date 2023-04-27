@@ -1,3 +1,10 @@
+/***
+ * Classe responsável por gerar os arquivos Servico
+ * 
+ * @author Danilo Rocha
+ * @author Heitor Lima
+ * @author Jônatas Henrique
+ */
 package projeto.saidas;
 
 import projeto.DadosTabela;
@@ -8,8 +15,8 @@ public class ElementoServico extends ElementoSaida{
 	private DadosTabela dadosTabela;
 	
 	public ElementoServico(DadosTabela dTabela) {
+		super("service", dTabela.getNomeClasse() + "ServiceImpl");
 		this.dadosTabela = dTabela;
-		this.pacote = "service";
 		this.imports.add("import java.util.List;\n");
 		this.imports.add("import java.util.Optional;\n");
 		this.imports.add("import org.springframework.beans.factory.annotation.Autowired;\n");
@@ -60,7 +67,7 @@ public class ElementoServico extends ElementoSaida{
 	}
 
 	private void gerarAbaertura() {
-		linhas.add(String.format("@Service\npublic class %sServiceImpl implements %sService {\n\n", this.dadosTabela.getNomeClasse(),this.dadosTabela.getNomeClasse()));
+		linhas.add(String.format("@Service\npublic class %s implements %sService {\n\n", this.nomeArquivo,this.dadosTabela.getNomeClasse()));
 	}
 	
 	private void gerarFechamento() {

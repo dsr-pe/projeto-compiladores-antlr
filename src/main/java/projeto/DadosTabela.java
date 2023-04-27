@@ -1,3 +1,12 @@
+/***
+ * Classe responsável por extrair as informações da tabela,
+ * Controlando a duplicidade de colunas e existência de uma PK
+ * 
+ * @author Danilo Rocha
+ * @author Heitor Lima
+ * @author Jônatas Henrique
+ */
+
 package projeto;
 
 import java.util.ArrayList;

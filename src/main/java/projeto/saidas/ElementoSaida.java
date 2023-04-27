@@ -1,3 +1,11 @@
+/***
+ * Classe abstrata com informaçoes básicas dos elementos de saída
+ * 
+ * @author Danilo Rocha
+ * @author Heitor Lima
+ * @author Jônatas Henrique
+ */
+
 package projeto.saidas;
 
 import java.util.ArrayList;
@@ -9,12 +17,19 @@ public abstract class ElementoSaida {
 	protected Set<String> imports = new HashSet<>();
 	protected List<String> linhas = new ArrayList<>();
 	protected String pacote;
+	protected String nomeArquivo;
 	
 	protected StringBuffer saida = new StringBuffer();
 	
 	public StringBuffer getSaida() {
 		return saida;
 	}
+	
+	public ElementoSaida(String pacote, String nomeArquivo) {
+		this.pacote = pacote;
+		this.nomeArquivo = nomeArquivo;
+	}
+	
 	
 	
 	protected void montarArquivo() {
@@ -28,5 +43,13 @@ public abstract class ElementoSaida {
 		for (String l : linhas) {
 			saida.append(l);
 		}
+	}
+	
+	public String getPacote() {
+		return this.pacote;
+	}
+	
+	public String getNomeArquivo() {
+		return this.nomeArquivo;
 	}
 }

@@ -1,3 +1,12 @@
+/***
+ * Classe responsável por extrair as informações das colunas da tabela
+ * 
+ * @author Danilo Rocha
+ * @author Heitor Lima
+ * @author Jônatas Henrique
+ */
+
+
 package projeto;
 
 import org.antlr.v4.runtime.tree.TerminalNode;
