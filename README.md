@@ -1,3 +1,4 @@
+
 # Gerador de classes Spring MVC
 
 ## Equipe
@@ -102,10 +103,13 @@ WS : [ \t\n\r]+ -> skip ;
 Para criar um codespace para o projeto, basta clicar nos botões, correspondentes no menu do repositório do GitHub, identificados em verde abaixo:
 
 
+
 ![enter image description here](https://github.com/dsr-pe/projeto-compiladores-antlr/blob/main/imagens/codespace-criacao.png?raw=true)
 
 
+
 Quando o Codespace for criado com sucesso, você irá visualizar as informações do projeto, conforme imagem:
+
 
 ![enter image description here](https://github.com/dsr-pe/projeto-compiladores-antlr/blob/main/imagens/codespace-projeto.png?raw=true)
 
@@ -351,7 +355,7 @@ public class DepartamentoController {
 
 ### Rodando "input.sql" com modo saída 1 (Disco)
 ````shell
-java -cp bin:antlr-4.12.0-complete.jar projeto.Main input.sql 0
+java -cp bin:antlr-4.12.0-complete.jar projeto.Main input.sql 1
 ````
 #### Resultado
 O programa irá gerar os arquivos, respeitando os "pacotes", no disco. Conforme imagem abaixo:
