@@ -9,15 +9,12 @@
 
 ## Motivação
 
-A velocidade de entrega de um projeto é um fator crucial nos dias de hoje por diversas razões. Em um mundo cada vez mais competitivo, as empresas precisam ser ágeis e flexíveis para acompanhar as mudanças do mercado e atender às necessidades dos clientes.
-Em um projeto utilizando Spring MVC a criação de CRUDs (Create, Read, Update, Delete) manualmente pode ser uma tarefa demorada e propensa a erros, por exemplo:
 
- - As classes devem corresponder exatamente as definições do banco de dados
- - O desenvolvedor deve ficar atento aos usos das Anotações Java.
- - Dúvidas nas correspondências dos tipos definidos no banco de dados e os tipos definidos no Java
- - Dentre outros
+A velocidade de entrega de um projeto é um fator crucial nos dias de hoje. As empresas precisam ser ágeis e flexíveis para acompanhar as mudanças do mercado e atender às necessidades dos clientes. No entanto, a criação manual de CRUDs em um projeto Spring MVC pode ser demorada e propensa a erros. 
 
-Além disso, esse processo de criação é bastante mecânico e o desenvolvedor poderia dedicar o seu tempo em códigos que diferenciam sua aplicação das outras, não em processos totalmente semelhantes.
+O desenvolvedor precisa garantir que as classes correspondam exatamente às definições do banco de dados, usar anotações Java de forma correta, além de lidar com questões de correspondência de tipos entre banco de dados e Java, entre outros desafios. Esse processo mecânico pode consumir tempo e recursos, impedindo que o desenvolvedor se dedique a tarefas mais criativas e diferenciadas. 
+
+Para resolver esse problema, apresentamos o Gerador de Classes Spring MVC, que automatiza a criação de CRUDs, reduzindo erros e economizando tempo de desenvolvimento. Com o Gerador de Classes Spring MVC, os desenvolvedores podem focar em tarefas mais importantes e contribuir para a entrega ágil de projetos de alta qualidade.
 
 ## Proposta
 A ideia é fazer um gerador de código, utilizando ANTLR, que utilizando como entrada os comando DDL dos banco de dados (os creates tables), seja possível gerar as classes dos pacotes: model, repository, service e controller. Seguindo a hierarquia indicada a seguir:
@@ -367,3 +364,7 @@ java -cp bin:antlr-4.12.0-complete.jar projeto.Main input.sql 1
 O programa irá gerar os arquivos, respeitando os "pacotes", no disco. Conforme imagem abaixo:
 
 ![enter image description here](https://github.com/dsr-pe/projeto-compiladores-antlr/blob/main/imagens/codespace-resultado-disco.png?raw=true)
+
+## Conclusão
+
+Em conclusão, o Gerador de Classes Spring MVC é uma ferramenta útil para desenvolvedores que desejam acelerar a criação de CRUDs em projetos Spring MVC, reduzindo erros e economizando tempo de desenvolvimento. Com a automação dessas tarefas, os desenvolvedores podem se concentrar em tarefas mais importantes e criativas, permitindo uma entrega mais ágil e de alta qualidade de seus projetos. Além disso, o Gerador de Classes Spring MVC é de código aberto e está disponível para uso e contribuição da comunidade de desenvolvedores. Esperamos que essa ferramenta seja útil e contribua para o sucesso de projetos Spring MVC em todo o mundo.
