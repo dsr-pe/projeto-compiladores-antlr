@@ -98,9 +98,15 @@ WS : [ \t\n\r]+ -> skip ;
 
 ##  Tutorial de uso
 
-### Criando um codespace
+### Projeto Eclipse
+Para um maior entendimento do processo de desenvolvimento do projeto, é recomendado assistir o vídeo, clicando no link abaixo, que explica cada passo necessário para configuração do projeto e motivo da existência de cada classe.
 
-Para criar um codespace para o projeto, basta clicar nos botões, correspondentes no menu do repositório do GitHub, identificados em verde abaixo:
+[Vídeo com explicação detalhada do projeto ](https://drive.google.com/file/d/12x5sYfD0FR_jaudQldT48xPvbF8eAdGs/view?usp=sharing)
+
+### Criando um Codespace
+Para entender o processo de criação dos Codespace, disponibilizamos duas opções, a primeira consiste em assistir o vídeo explicativo[ \[Clique neste link para assistir o vídeo\]](https://drive.google.com/file/d/1FVhxhZI02Fx8VWih4MVsusQLdmEnF19l/view?usp=sharing), já a segunda consiste em realizar todos os passos indicados à seguir:
+
+Para criar um Codespace para o projeto, basta clicar nos botões, correspondentes no menu do repositório do GitHub, identificados em verde abaixo:
 
 
 
